@@ -8,16 +8,16 @@ const projects = [
   {name: 'Редактура', color: '#EC4899'},
 ]
 
-function Projects() {
+function Projects({ isMenuOpen }) {
   return (
     <div className='projects'>
       <div className='projects__titleDiv'>
         <a href='#' className='projects__titleLink'>
           <img src={ProjectsIcon} alt='' className='projects__titleImg' />
-          <span className='projects__titleSpan'>Проекты</span>
+          {isMenuOpen && <span className='projects__titleSpan'>Проекты</span>}
         </a>
       </div>
-      <ul className='projects__list'>
+      <ul className={`projects__list ${!isMenuOpen ? 'projects__list_unvisible' : ''}`}>
         {projects.map((item, index) => {
           return (
             <li className='projects__listItem' key={item.name}>

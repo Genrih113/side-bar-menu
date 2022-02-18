@@ -65,6 +65,10 @@
   /* flex-grow: 1; */
 }
 
+.projects__list_unvisible {
+  display: none;
+}
+
 .projects__listItem {
   min-height: 36px;
   min-width: 36px;
@@ -142,6 +146,7 @@
   color: #ffffff;
   outline: none;
   margin-top: auto;
+  min-width: 36px;
   /* overflow: hidden; */
 }
 

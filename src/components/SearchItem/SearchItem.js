@@ -1,11 +1,11 @@
 import './SearchItem.css'
 import SearchIcon from '../../images/SearchIcon.svg'
 
-function SearchItem() {
+function SearchItem({ isMenuOpen }) {
   return (
     <div className='searchItem'>
       <img src={SearchIcon} alt='' className='searchItem__img' />
-      <input className='searchItem__input' placeholder='Search' />
+      <input className={`searchItem__input ${!isMenuOpen ? ' searchItem__inputClose' : ''}`} placeholder='Search' />
     </div>
   )
 }

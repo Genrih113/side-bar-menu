@@ -1,3 +1,10 @@
 * {
   border: 1px solid red;
 }
+
+.switch {
+  background-color: #3f3f46;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}

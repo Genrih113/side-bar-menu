@@ -1,3 +1,5 @@
+import React from 'react'
+
 import SearchItem from '../SearchItem/SearchItem'
 import NavigationItem from '../NavigationItem/NavigationItem'
 import Projects from '../Projects/Projects'
@@ -21,31 +23,27 @@ const navItemsArr = [
 ]
 
 function SideBarMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+
   return (
-    <div className='sideBarMenu'>
+    <div className={`sideBarMenu ${!isMenuOpen ? 'sideBarMenuClose' : ''}`}>
       <div className='sideBarMenu__burger'>
-        <button className='sideBarMenu__burgerButton'>
+        <button className='sideBarMenu__burgerButton' onClick={() => {setIsMenuOpen(!isMenuOpen)}}>
           <img src={BurgerIcon} alt='menu button icon' className='sideBarMenu__burgerImg' />
         </button>
-        <img src={Logo} alt='' className='sideBarMenu__logoImg' />
+        {isMenuOpen && <img src={Logo} alt='' className='sideBarMenu__logoImg' />}
       </div>
       <div className='sideBarMenu__searchWrapper'>
-        <SearchItem />
+        <SearchItem isMenuOpen={isMenuOpen}/>
       </div>
       <ul className='sideBarMenu__optionList'>
-        {/* <li className='sideBarMenu__optionListItem'>
-          <button className='sideBarMenu__optionListButton'>
-            <img src={HomeIcon} alt='' className='sideBarMenu__optionImg' />
-            <span className='sideBarMenu__optionSpan'>Главная</span>
-          </button>
-        </li> */}
         {navItemsArr.map((item, index) => 
-          <NavigationItem key={item.text} icon={item.icon} text={item.text} />
+          <NavigationItem key={item.text} icon={item.icon} text={item.text} isMenuOpen={isMenuOpen}/>
         )}
       </ul>
       <hr className='sideBarMenu__divider' />
-      <Projects />
-      <UserZone />
+      <Projects isMenuOpen={isMenuOpen} />
+      <UserZone isMenuOpen={isMenuOpen} />
     </div>
   )
 }
