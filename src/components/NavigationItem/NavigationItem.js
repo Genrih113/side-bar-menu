@@ -1,20 +1,7 @@
 import React from 'react'
 import './NavigationItem.css'
 
-function NavigationItem({ icon = {}, text = '', isMenuOpen }) {
-  const [isOpened, setIsOpened] = React.useState(isMenuOpen)
-
-  React.useEffect(() => {
-    if (isMenuOpen === false) {
-      const timer = setTimeout(() => {
-        setIsOpened(false);
-        clearInterval(timer);
-      }, 500);
-    } else if (isMenuOpen === true) {
-      setIsOpened(true);
-    }
-  }, [isMenuOpen]);
-
+function NavigationItem({ icon = {}, text = '', isOpened }) {
   return (
     <li className='navigationItem'>
       <a href='#' className='navigationItem__link'>

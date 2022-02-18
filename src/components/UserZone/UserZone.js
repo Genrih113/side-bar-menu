@@ -3,7 +3,7 @@ import Avatar from '../../images/Avatar.jpg'
 import UserStatus from '../../images/UserStatus.svg'
 import UserMenuIcon from '../../images/UserMenuIcon.svg'
 
-function UserZone({ isMenuOpen }) {
+function UserZone({ isOpened }) {
   return(
     <div className='userZone'>
       <div className='userZone__avaZone'>
@@ -12,7 +12,7 @@ function UserZone({ isMenuOpen }) {
           <img src={UserStatus} alt='' className='userZone__userStatus' />
         </div>
       </div>
-      {isMenuOpen &&
+      {isOpened &&
         <>
           <div className='userZone__about'>
             <div className='userZone__userName'>Михаил Воробьев</div>
