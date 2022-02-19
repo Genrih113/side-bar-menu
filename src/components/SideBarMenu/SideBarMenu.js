@@ -56,7 +56,7 @@ function SideBarMenu() {
       </div>
       <ul className='sideBarMenu__optionList'>
         {navItemsArr.map((item, index) => 
-          <NavigationItem key={item.text} icon={item.icon} text={item.text} isOpened={isOpened}/>
+          <NavigationItem key={item.text} icon={item.icon} text={item.text} isOpened={isOpened} isBadge={index === 1 ? '12' : ''}/>
         )}
       </ul>
       <hr className='sideBarMenu__divider' />

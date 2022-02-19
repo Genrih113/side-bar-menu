@@ -54,3 +54,14 @@
 .navigationItem__span {
 
 }
+
+.navigationItem__badge {
+  background-color: #8b5cf6;
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin-left: auto;
+  color: white;
+  font-size: 10px;
+  min-width: 10px;
+  text-align: center;
+}
