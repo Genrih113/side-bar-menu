@@ -12,6 +12,7 @@ function NavigationItem({ icon = {}, text = '', isOpened = false, isBadge = fals
             {isBadge && <span className='navigationItem__badge'>{isBadge}</span>}
           </>
         }
+        {!isOpened && isBadge && <span className='navigationItem__miniBadge'></span>}
       </a>
     </li>
   )
