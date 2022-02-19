@@ -38,6 +38,11 @@ function SideBarMenu() {
     }
   }, [isMenuOpen]);
 
+  // фикс проблемы отсутствия надписей при быстром 2-ом клике (скрыть/открыть) по кнопке меню
+  React.useEffect (() => {
+    if (isOpened !== isMenuOpen) setIsOpened(isMenuOpen);
+  }, [isOpened]);
+
   return (
     <div className={`sideBarMenu ${!isMenuOpen ? 'sideBarMenuClose' : ''}`}>
       <div className='sideBarMenu__burger'>
