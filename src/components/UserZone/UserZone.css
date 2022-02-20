@@ -6,6 +6,12 @@
   justify-content: space-between;
   overflow: hidden;
   background-color: #27272a;
+  color: #ffffff;
+}
+
+.userZone_light {
+  background-color: #f4f4f5;
+  color: #3f3f46;
 }
 
 .userZone__avaZone {
@@ -38,7 +44,7 @@
 }
 
 .userZone__about {
-  color: #a1a1aa;
+  /* color: #a1a1aa; */
   margin-left: 16px;
   margin-right: auto;
   font-family: Inter;
@@ -55,7 +61,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .userZone__userRank {
@@ -74,6 +80,14 @@
 
 .userZone__menuButton:hover, :focus {
   background-color: #3f3f46;
+}
+
+.userZone__menuButton_light:hover {
+  background-color: #ede9fe;
+}
+
+.userZone__menuButton_light:focus {
+  background-color: #ede9fe;
 }
 
 .userZone__menuIcon {

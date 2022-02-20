@@ -6,7 +6,7 @@ import Projects from '../Projects/Projects'
 
 import './SideBarMenu.css'
 import BurgerIcon from '../../images/BurgerIcon.svg'
-import Logo from '../../images/Logo.svg'
+import Logo from '../../images/Logo'
 import HomeIcon from '../../images/HomeIcon.svg'
 import InboxIcon from '../../images/InboxIcon.svg'
 import ListIcon from '../../images/ListIcon.svg'
@@ -22,7 +22,7 @@ const navItemsArr = [
   {icon: TeamIcon, text: 'Команда'},
 ]
 
-function SideBarMenu() {
+function SideBarMenu({ isLight = false }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const [isOpened, setIsOpened] = React.useState(isMenuOpen)
@@ -44,24 +44,25 @@ function SideBarMenu() {
   }, [isOpened]);
 
   return (
-    <div className={`sideBarMenu ${!isMenuOpen ? 'sideBarMenuClose' : ''}`}>
-      <div className='sideBarMenu__burger'>
-        <button className='sideBarMenu__burgerButton' onClick={() => {setIsMenuOpen(!isMenuOpen)}}>
+    <div className={`sideBarMenu ${isLight ? 'sideBarMenu_light' : ''} ${!isMenuOpen ? 'sideBarMenuClose' : ''}`}>
+      <div className={`sideBarMenu__burger ${isLight ? 'sideBarMenu__burger_light' : ''}`}>
+        <button className={`sideBarMenu__burgerButton ${isLight ? 'sideBarMenu__burgerButton_light' : ''}`} onClick={() => {setIsMenuOpen(!isMenuOpen)}}>
           <img src={BurgerIcon} alt='menu button icon' className='sideBarMenu__burgerImg' />
         </button>
-        {isOpened && <img src={Logo} alt='' className='sideBarMenu__logoImg' />}
+        {/* {isOpened && <img src={Logo} alt='' className='sideBarMenu__logoImg' />} */}
+        {isOpened && <Logo ccn={`sideBarMenu__logoImg ${isLight ? 'sideBarMenu__logoImg_light' : ''}`} />}
       </div>
       <div className='sideBarMenu__searchWrapper'>
-        <SearchItem isOpened={isOpened}/>
+        <SearchItem isOpened={isOpened} isLight={isLight} />
       </div>
-      <ul className='sideBarMenu__optionList'>
+      <ul className={`sideBarMenu__optionList ${isLight ? 'sideBarMenu__optionList_light' : ''}`}>
         {navItemsArr.map((item, index) => 
-          <NavigationItem key={item.text} icon={item.icon} text={item.text} isOpened={isOpened} isBadge={index === 1 ? '12' : ''}/>
+          <NavigationItem key={item.text} icon={item.icon} text={item.text} isOpened={isOpened} isBadge={index === 1 ? '12' : ''} isLight={isLight} />
         )}
       </ul>
       <hr className='sideBarMenu__divider' />
-      <Projects isOpened={isOpened} />
-      <UserZone isOpened={isOpened} />
+      <Projects isOpened={isOpened} isLight={isLight} />
+      <UserZone isOpened={isOpened} isLight={isLight} />
     </div>
   )
 }

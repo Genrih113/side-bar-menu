@@ -8,11 +8,11 @@ const projects = [
   {name: 'Редактура', color: '#EC4899'},
 ]
 
-function Projects({ isOpened }) {
+function Projects({ isOpened, isLight }) {
   return (
-    <div className='projects'>
+    <div className={`projects ${isLight ? 'projects_light' : ''}`}>
       <div className='projects__titleDiv'>
-        <a href='#' className='projects__titleLink'>
+        <a href='#' className={`projects__titleLink ${isLight ? 'projects__titleLink_light' : ''}`}>
           <img src={ProjectsIcon} alt='' className='projects__titleImg' />
           {isOpened && <span className='projects__titleSpan'>Проекты</span>}
         </a>
@@ -23,7 +23,7 @@ function Projects({ isOpened }) {
           {projects.map((item, index) => {
             return (
               <li className='projects__listItem' key={item.name}>
-                <a href='#' className='projects__listItemLink'>
+                <a href='#' className={`projects__listItemLink ${isLight ? 'projects__listItemLink_light' : ''}`}>
                   <div className='projects__listItemImg' style={{backgroundColor:`${item.color}`}}></div>
                   <span className='projects__listItemSpan'>{item.name}</span>
                 </a>
@@ -32,7 +32,7 @@ function Projects({ isOpened }) {
           })}
         </ul>
       }
-      <button className='projects__createButton'>
+      <button className={`projects__createButton ${isLight ? 'projects__createButton_light' : ''}`}>
         <div>
           <img src={PlusIcon} alt='' className='projects__createImg'/>
           {isOpened && <span className='projects__createSpan'>Создать проект</span>}

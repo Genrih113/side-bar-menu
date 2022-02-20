@@ -3,9 +3,9 @@ import Avatar from '../../images/Avatar.jpg'
 import UserStatus from '../../images/UserStatus.svg'
 import UserMenuIcon from '../../images/UserMenuIcon.svg'
 
-function UserZone({ isOpened }) {
+function UserZone({ isOpened, isLight }) {
   return(
-    <div className='userZone'>
+    <div className={`userZone ${isLight ? 'userZone_light' : ''}`}>
       <div className='userZone__avaZone'>
         <div className='userZone__avaWrapper'>
           <img src={Avatar} alt='' className='userZone__ava' />
@@ -18,7 +18,7 @@ function UserZone({ isOpened }) {
             <div className='userZone__userName'>Михаил Воробьев</div>
             <div className='userZone__userRank'>Разработчик</div>
           </div>
-          <button className='userZone__menuButton'>
+          <button className={`userZone__menuButton ${isLight ? 'userZone__menuButton_light' : ''}`}>
             <img src={UserMenuIcon} alt='' className='userZone__menuIcon'/>
           </button>
         </>

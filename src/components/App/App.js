@@ -4,14 +4,14 @@ import './App.css';
 import SideBarMenu from '../SideBarMenu/SideBarMenu'
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isLight, setIsLight] = React.useState(false)
 
   return (
     <div className="App">
-      <button className='switch' onClick={() => {setIsMenuOpen(!isMenuOpen)}}>
-        Dark
+      <button className='switch' onClick={() => {setIsLight(!isLight)}}>
+        Сменить тему
       </button>
-      <SideBarMenu isMenuOpen={isMenuOpen}/>
+      <SideBarMenu isLight={isLight} />
     </div>
   )
 }

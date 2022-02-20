@@ -15,6 +15,10 @@
   transition: width 0.5s linear 0s;
 }
 
+.sideBarMenu_light {
+  background-color: #ffffff;
+}
+
 .sideBarMenuClose {
   width: 84px;
 }
@@ -22,11 +26,15 @@
 .sideBarMenu__burger {
   background-color: #27272a;
   padding: 24px;
+  min-height: 36px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
+}
 
+.sideBarMenu__burger_light {
+  background-color: #f9fafb;
 }
 
 .sideBarMenu__burgerButton {
@@ -42,6 +50,14 @@
   background-color: #3f3f46;
 }
 
+.sideBarMenu__burgerButton_light:hover {
+  background-color: #ede9fe;
+}
+
+.sideBarMenu__burgerButton_light:focus {
+  background-color: #ede9fe;
+}
+
 .sideBarMenu__burgerImg {
   vertical-align: bottom;
   width: 36px;
@@ -52,16 +68,23 @@
   margin-left: 16px;
 }
 
+.sideBarMenu__logoImg_light {
+  fill: #18181b
+}
+
 .sideBarMenu__searchWrapper {
   padding: 32px 24px 8px;
-  background-color: #18181B;
 }
 
 .sideBarMenu__optionList {
-  background-color: #18181b;
   padding: 8px 24px;
   margin: 0;
   list-style: none;
+  color: #a1a1aa;
+}
+
+.sideBarMenu__optionList_light {
+  color: #52525b;
 }
 
 .sideBarMenu__divider {
@@ -69,4 +92,5 @@
   margin: 32px 24px;
   height: 1px;
   border: none;
+  flex-shrink: 0;
 }

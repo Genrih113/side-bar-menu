@@ -1,10 +1,10 @@
 import React from 'react'
 import './NavigationItem.css'
 
-function NavigationItem({ icon = {}, text = '', isOpened = false, isBadge = false }) {
+function NavigationItem({ icon = {}, text = '', isOpened = false, isBadge = false, isLight = false }) {
   return (
     <li className='navigationItem'>
-      <a href='#' className='navigationItem__link'>
+      <a href='#' className={`navigationItem__link ${isLight ? 'navigationItem__link_light' : ''}`}>
         <img src={icon} alt='' className='navigationItem__img' />
         {isOpened && 
           <>

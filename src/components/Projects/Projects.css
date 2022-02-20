@@ -1,9 +1,13 @@
 .projects {
   padding: 8px 24px 24px;
-  background-color: #18181b;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  color: #a1a1aa;
+}
+
+.projects_light {
+  color: #52525b;
 }
 
 .projects__titleDiv {
@@ -33,13 +37,23 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #a1a1aa;
+  color: inherit;
 }
 
 .projects__titleLink:hover, :focus {
   background-color: #3f3f46;
   color: #ffffff;
   font-weight: 600;
+}
+
+.projects__titleLink_light:hover {
+  background-color: #ede9fe;
+  color: #7c3aed;
+}
+
+.projects__titleLink_light:focus {
+  background-color: #ede9fe;
+  color: #7c3aed;
 }
 
 .projects__titleLink > * {
@@ -101,13 +115,23 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #a1a1aa;
+  color: inherit;
 }
 
 .projects__listItemLink:hover, :focus {
   background-color: #3f3f46;
   color: #ffffff;
   font-weight: 600;
+}
+
+.projects__listItemLink_light:hover {
+  background-color: #ede9fe;
+  color: #7c3aed;
+}
+
+.projects__listItemLink_light:focus {
+  background-color: #ede9fe;
+  color: #7c3aed;
 }
 
 .projects__listItemLink > * {
@@ -152,6 +176,18 @@
 
 .projects__createButton:hover, :focus {
   background-color: #3f3f46;
+}
+
+.projects__createButton_light:hover {
+  background-color: #ede9fe;
+  color: #7c3aed;
+  border: 1px solid #7c3aed;
+}
+
+.projects__createButton_light:focus {
+  background-color: #ede9fe;
+  color: #7c3aed;
+  border: 1px solid #7c3aed;
 }
 
 .projects__createButton > div {
