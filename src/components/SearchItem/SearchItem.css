@@ -6,14 +6,17 @@
   height: 36px;
   box-sizing: border-box;
   min-width: 36px;
+  stroke: #71717a;
 }
 
 .searchItem:hover {
   background-color: #3f3f46;
+  stroke: #ffffff;
 }
 
 .searchItem_light:hover {
   background-color: #ede9fe;
+  stroke: #7c3aed;
 }
 
 .searchItem__img {
@@ -50,6 +53,10 @@
   background-color: #3f3f46;
 }
 
+.searchItem__input:focus ~ svg {
+  stroke: #ffffff;
+}
+
 .searchItem__inputClose {
   width: 100%;
   padding: 0;
@@ -75,6 +82,14 @@
 .searchItem__input_light:focus {
   background-color: #ede9fe;
   color: #7c3aed;
+}
+
+.searchItem__input_light:hover ~ svg {
+  stroke: #7c3aed;
+}
+
+.searchItem__input_light:focus ~ svg {
+  stroke: #7c3aed;
 }
 
 .searchItem__input_light:placeholder-shown {

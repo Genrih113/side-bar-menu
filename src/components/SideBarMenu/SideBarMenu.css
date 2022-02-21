@@ -44,18 +44,22 @@
   border-radius: 4px;
   cursor: pointer;
   outline: none;
+  stroke: #71717a;
 }
 
 .sideBarMenu__burgerButton:hover, :focus {
   background-color: #3f3f46;
+  stroke: #ffffff;
 }
 
 .sideBarMenu__burgerButton_light:hover {
   background-color: #ede9fe;
+  stroke: #7c3aed;
 }
 
 .sideBarMenu__burgerButton_light:focus {
   background-color: #ede9fe;
+  stroke: #7c3aed;
 }
 
 .sideBarMenu__burgerImg {

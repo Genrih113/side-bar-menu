@@ -38,22 +38,26 @@
   font-size: 14px;
   line-height: 20px;
   color: inherit;
+  stroke: #71717a;
 }
 
 .projects__titleLink:hover, :focus {
   background-color: #3f3f46;
   color: #ffffff;
   font-weight: 600;
+  stroke: #ffffff;
 }
 
 .projects__titleLink_light:hover {
   background-color: #ede9fe;
   color: #7c3aed;
+  stroke: #7c3aed;
 }
 
 .projects__titleLink_light:focus {
   background-color: #ede9fe;
   color: #7c3aed;
+  stroke: #7c3aed;
 }
 
 .projects__titleLink > * {
@@ -65,7 +69,7 @@
 }
 
 .projects__titleImg {
-
+  flex-shrink: 0;
 }
 
 .projects__titleSpan {
@@ -171,6 +175,7 @@
   outline: none;
   margin-top: auto;
   min-width: 36px;
+  stroke: #ffffff;
   /* overflow: hidden; */
 }
 
@@ -182,12 +187,14 @@
   background-color: #ede9fe;
   color: #7c3aed;
   border: 1px solid #7c3aed;
+  stroke: #7c3aed;
 }
 
 .projects__createButton_light:focus {
   background-color: #ede9fe;
   color: #7c3aed;
   border: 1px solid #7c3aed;
+  stroke: #7c3aed;
 }
 
 .projects__createButton > div {
@@ -200,7 +207,7 @@
 }
 
 .projects__createImg {
-
+  flex-shrink: 0;
 }
 
 .projects__createSpan {

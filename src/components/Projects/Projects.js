@@ -1,6 +1,6 @@
 import './Projects.css'
-import ProjectsIcon from '../../images/ProjectsIcon.svg'
-import PlusIcon from '../../images/PlusIcon.svg'
+import ProjectsIcon from '../../images/ProjectsIcon'
+import PlusIcon from '../../images/PlusIcon'
 
 const projects = [
   {name: 'Дизайн', color: '#A855F7'},
@@ -13,7 +13,8 @@ function Projects({ isOpened, isLight }) {
     <div className={`projects ${isLight ? 'projects_light' : ''}`}>
       <div className='projects__titleDiv'>
         <a href='#' className={`projects__titleLink ${isLight ? 'projects__titleLink_light' : ''}`}>
-          <img src={ProjectsIcon} alt='' className='projects__titleImg' />
+          {/* <img src={ProjectsIcon} alt='' className='projects__titleImg' /> */}
+          <ProjectsIcon ccn='projects__titleImg' />
           {isOpened && <span className='projects__titleSpan'>Проекты</span>}
         </a>
       </div>
@@ -34,7 +35,8 @@ function Projects({ isOpened, isLight }) {
       }
       <button className={`projects__createButton ${isLight ? 'projects__createButton_light' : ''}`}>
         <div>
-          <img src={PlusIcon} alt='' className='projects__createImg'/>
+          {/* <img src={PlusIcon} alt='' className='projects__createImg'/> */}
+          <PlusIcon ccn='projects__createImg' />
           {isOpened && <span className='projects__createSpan'>Создать проект</span>}
         </div>
       </button>

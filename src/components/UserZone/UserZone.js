@@ -1,7 +1,7 @@
 import './UserZone.css'
 import Avatar from '../../images/Avatar.jpg'
 import UserStatus from '../../images/UserStatus.svg'
-import UserMenuIcon from '../../images/UserMenuIcon.svg'
+import UserMenuIcon from '../../images/UserMenuIcon'
 
 function UserZone({ isOpened, isLight }) {
   return(
@@ -19,7 +19,8 @@ function UserZone({ isOpened, isLight }) {
             <div className='userZone__userRank'>Разработчик</div>
           </div>
           <button className={`userZone__menuButton ${isLight ? 'userZone__menuButton_light' : ''}`}>
-            <img src={UserMenuIcon} alt='' className='userZone__menuIcon'/>
+            {/* <img src={UserMenuIcon} alt='' className='userZone__menuIcon'/> */}
+            <UserMenuIcon ccn='userZone__menuIcon' />
           </button>
         </>
       }

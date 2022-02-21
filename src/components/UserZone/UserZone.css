@@ -76,18 +76,22 @@
   border: none;
   border-radius: 4px;
   outline: none;
+  stroke: #71717a;
 }
 
 .userZone__menuButton:hover, :focus {
   background-color: #3f3f46;
+  stroke: #ffffff;
 }
 
 .userZone__menuButton_light:hover {
   background-color: #ede9fe;
+  stroke: #7c3aed;
 }
 
 .userZone__menuButton_light:focus {
   background-color: #ede9fe;
+  stroke: #7c3aed;
 }
 
 .userZone__menuIcon {

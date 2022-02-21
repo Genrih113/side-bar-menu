@@ -5,7 +5,9 @@ function NavigationItem({ icon = {}, text = '', isOpened = false, isBadge = fals
   return (
     <li className='navigationItem'>
       <a href='#' className={`navigationItem__link ${isLight ? 'navigationItem__link_light' : ''}`}>
-        <img src={icon} alt='' className='navigationItem__img' />
+        {/* <img src={icon} alt='' className='navigationItem__img' /> */}
+        {/* <icon ccn='navigationItem__img' /> */}
+        {icon}
         {isOpened && 
           <>
             <span className='navigationItem__span'>{text}</span>

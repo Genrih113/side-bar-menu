@@ -5,13 +5,13 @@ import NavigationItem from '../NavigationItem/NavigationItem'
 import Projects from '../Projects/Projects'
 
 import './SideBarMenu.css'
-import BurgerIcon from '../../images/BurgerIcon.svg'
+import BurgerIcon from '../../images/BurgerIcon'
 import Logo from '../../images/Logo'
-import HomeIcon from '../../images/HomeIcon.svg'
-import InboxIcon from '../../images/InboxIcon.svg'
-import ListIcon from '../../images/ListIcon.svg'
-import ActivityIcon from '../../images/ActivityIcon.svg'
-import TeamIcon from '../../images/TeamIcon.svg'
+import HomeIcon from '../../images/HomeIcon'
+import InboxIcon from '../../images/InboxIcon'
+import ListIcon from '../../images/ListIcon'
+import ActivityIcon from '../../images/ActivityIcon'
+import TeamIcon from '../../images/TeamIcon'
 import UserZone from '../UserZone/UserZone'
 
 const navItemsArr = [
@@ -47,7 +47,8 @@ function SideBarMenu({ isLight = false }) {
     <div className={`sideBarMenu ${isLight ? 'sideBarMenu_light' : ''} ${!isMenuOpen ? 'sideBarMenuClose' : ''}`}>
       <div className={`sideBarMenu__burger ${isLight ? 'sideBarMenu__burger_light' : ''}`}>
         <button className={`sideBarMenu__burgerButton ${isLight ? 'sideBarMenu__burgerButton_light' : ''}`} onClick={() => {setIsMenuOpen(!isMenuOpen)}}>
-          <img src={BurgerIcon} alt='menu button icon' className='sideBarMenu__burgerImg' />
+          {/* <img src={BurgerIcon} alt='menu button icon' className='sideBarMenu__burgerImg' /> */}
+          <BurgerIcon ccn='sideBarMenu__burgerImg' />
         </button>
         {/* {isOpened && <img src={Logo} alt='' className='sideBarMenu__logoImg' />} */}
         {isOpened && <Logo ccn={`sideBarMenu__logoImg ${isLight ? 'sideBarMenu__logoImg_light' : ''}`} />}
@@ -57,7 +58,7 @@ function SideBarMenu({ isLight = false }) {
       </div>
       <ul className={`sideBarMenu__optionList ${isLight ? 'sideBarMenu__optionList_light' : ''}`}>
         {navItemsArr.map((item, index) => 
-          <NavigationItem key={item.text} icon={item.icon} text={item.text} isOpened={isOpened} isBadge={index === 1 ? '12' : ''} isLight={isLight} />
+          <NavigationItem key={item.text} icon={<item.icon ccn='navigationItem__img' />} text={item.text} isOpened={isOpened} isBadge={index === 1 ? '12' : ''} isLight={isLight} />
         )}
       </ul>
       <hr className='sideBarMenu__divider' />

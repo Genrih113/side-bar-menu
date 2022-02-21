@@ -34,24 +34,28 @@
   /* color: #a1a1aa; */
 
   position: relative;
+  stroke: #71717a;
 }
 
 .navigationItem__link:hover, :focus {
   background-color: #3f3f46;
   color: #ffffff;
   font-weight: 600;
+  stroke: #ffffff;
 }
 
 .navigationItem__link_light:hover {
   background-color: #ede9fe;
   color: #7c3aed;
   font-weight: 600;
+  stroke: #7c3aed;
 }
 
 .navigationItem__link_light:focus {
   background-color: #ede9fe;
   color: #7c3aed;
   font-weight: 600;
+  stroke: #7c3aed;
 }
 
 .navigationItem__link > * {
@@ -63,7 +67,7 @@
 }
 
 .navigationItem__img {
-  
+  flex-shrink: 0;
 }
 
 .navigationItem__span {
