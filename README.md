@@ -2,4 +2,4 @@
 
 Запуск- стандартный запуск реакт-приложения
 
-оступно по адресу: https://genrih113.github.io/side-bar-menu/
+Доступно по адресу: https://genrih113.github.io/side-bar-menu/
